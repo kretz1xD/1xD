@@ -9,6 +9,17 @@
     </style>
 </head>
 <body class="bg-gray-50">
+    <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.querySelector('html');
+
+    themeToggle.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+    });
+</script>
+<button id="theme-toggle" class="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded">
+    Toggle Dark Mode
+</button>
     <header class="bg-indigo-400 py-4">
         <div class="container mx-auto flex items-center justify-between px-4">
             <h1 class="text-white text-2xl font-bold">kretz1xD</h1>
