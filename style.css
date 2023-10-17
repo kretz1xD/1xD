@@ -1,22 +1,22 @@
-// Check for theme preference in local storage, if set
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    document.body.classList.add(savedTheme);
+/* Dark Theme Styles */
+body.dark-theme {
+    background-color: #1a1a1a; /* Set the background color for the dark theme */
+    color: #ffffff; /* Set the text color for the dark theme */
 }
 
-// Toggle theme function
-function toggleTheme() {
-    const body = document.body;
-    body.classList.toggle('dark-theme');
-    
-    // Store the user's theme preference in local storage
-    if (body.classList.contains('dark-theme')) {
-        localStorage.setItem('theme', 'dark-theme');
-    } else {
-        localStorage.setItem('theme', 'light-theme');
-    }
+/* You can define additional styles for specific elements */
+.dark-theme .header {
+    background-color: #333; /* Customize header background color */
 }
 
-// Attach the toggle function to the button
-const themeToggleBtn = document.getElementById('theme-toggle');
-themeToggleBtn.addEventListener('click', toggleTheme);
+.dark-theme .nav {
+    background-color: #444; /* Customize navigation background color */
+}
+
+.dark-theme .content {
+    background-color: #222; /* Customize content background color */
+}
+
+.dark-theme .footer {
+    background-color: #333; /* Customize footer background color */
+}
