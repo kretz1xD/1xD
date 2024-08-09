@@ -8,27 +8,3 @@
 document.getElementById('toggleThemeButton').addEventListener('click', function() {
     document.body.classList.toggle('dark-theme');
 });
-
-
-/* Dark Theme Styles */
-body.dark-theme {
-    background-color: #1a1a1a; /* Set the background color for the dark theme */
-    color: #ffffff; /* Set the text color for the dark theme */
-}
-
-/* You can define additional styles for specific elements */
-.dark-theme .header {
-    background-color: #333; /* Customize header background color */
-}
-
-.dark-theme .nav {
-    background-color: #444; /* Customize navigation background color */
-}
-
-.dark-theme .content {
-    background-color: #222; /* Customize content background color */
-}
-
-.dark-theme .footer {
-    background-color: #333; /* Customize footer background color */
-}
