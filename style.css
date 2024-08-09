@@ -1,3 +1,15 @@
+<body class="dark-theme">
+    <div class="header">Header Content</div>
+    <div class="nav">Navigation</div>
+    <div class="content">Main Content</div>
+    <div class="footer">Footer Content</div>
+</body>
+
+document.getElementById('toggleThemeButton').addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+});
+
+
 /* Dark Theme Styles */
 body.dark-theme {
     background-color: #1a1a1a; /* Set the background color for the dark theme */
