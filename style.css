@@ -1,10 +1,31 @@
-<body class="dark-theme">
-    <div class="header">Header Content</div>
-    <div class="nav">Navigation</div>
-    <div class="content">Main Content</div>
-    <div class="footer">Footer Content</div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme Togg</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Your CSS file -->
+</head>
+<body>
+    <button id="theme-toggle">Toggle Dark Theme</button>
+    
+    <!-- Your other content goes here -->
 
-document.getElementById('toggleThemeButton').addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme');
-});
+    <script src="script.js"></script> <!-- Your JS file -->
+</body>
+</html>
+
+/* Light Theme (default) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Add your other styles here, including the ones for dark theme */
