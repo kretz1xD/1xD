@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<body class="dark-theme">
+<html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    </style>
+    <title>Erik's Tech Hub</title>
+    <!-- Stylish Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-    <header class="bg-indigo-400 py-4">
-        <div class="container mx-auto flex items-center justify-between px-4">
-             <p class="text-blue text-4xl font-bold">kretz1xD</h2>
-                
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Erik's Tech Hub</h1>
+            <!-- Dark/Light Mode Toggle -->
+            <label class="toggle-switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class="slider round"></span>
+            </label>
         </div>
     </header>
-    <main class="container mx-auto py-8 px-4">
-        <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-4"> About me</h2>
-            <p class="text-gray-700">
-                <h3>My name is Erik, I got into programming and gaming when I was 12
-        <h4> I call myself an "IT-support/Technical support", when it comes to the software side of things, as in I know how to optimize and get better performance out of the PC to get better FPS, lower latency, etc.
-            <h4>I love to help other people with these types of things, I have guided over 100,000 people with my GitHub rep that is used for how to optimize Apex Legends</h4>
-            </p>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Hi, I'm Erik!</h2>
+                <p class="hero-subtitle">I got into programming and gaming when I was 12, and now I specialize in optimizing PC performance for better FPS, lower latency, and smoother gameplay.</p>
+                <p class="hero-subtitle">As an IT/Technical support expert for software-side PC tweaks, I've guided over 100,000 people with my Apex Legends optimization GitHub repo.</p>
+                <a href="https://github.com/your-username/apex-optimization-repo" target="_blank" rel="noopener noreferrer" class="cta-button">Check My Apex Repo</a>
+            </div>
         </section>
 
-  <main class="container">
-    <section class="card">
-      <h1>My favorite subject, DePIN: </h1>
-      <a class="button" href="#projects"> </a>
-    </section>
-  </main>
+        <section class="expertise">
+            <div class="container">
+                <h3 class="section-title">My Expertise</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4 class="card-title">PC Performance Optimization</h4>
+                        <p class="card-text">Tweak software settings to boost FPS, reduce input latency, and eliminate stutters for gaming and productivity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="card-title">Apex Legends Optimization</h4>
+                        <p class="card-text">Curated repo with step-by-step guides to get the most out of your system for Apex Legends—used by 100k+ gamers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="card-title">Technical Support</h4>
+                        <p class="card-text">Help with software troubleshooting, driver updates, and system tweaks to keep your PC running at peak performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    © 2026 kretz1xD. Built with curiosity and caffeine.
-  </footer>
+        <section class="depin-projects">
+            <div class="container">
+                <h3 class="section-title">Favorite DePIN Projects (Use My Referral Links!)</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4 class="card-title">DataHive AI</h4>
+                        <p class="card-text">$3.5M Raised</p>
+                        <a href="https://datahive.ai?invite=v36etr9" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="card-title">Browser Cash</h4>
+                        <p class="card-text">$1M Raised</p>
+                        <a href="https://app.browser.cash/install?ref=qdsuebu3" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="card-title">Grass</h4>
+                        <p class="card-text">$14.5M Raised</p>
+                        <a href="https://app.grass.io/register?referralCode=u5khNQf2rAmFazd" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="card-title">Nodepay</h4>
+                        <p class="card-text">$7.00M Raised</p>
+                        <a href="https://app.nodepay.ai/register?ref=jDywZjLaAi7MJhf" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
+                    </div>
+                    <div class="feature-card">
+                        <h4 class="card-title">DAWN Validator</h4>
+                        <p class="card-text">$45M Raised<br>Use Code: hznvxikv</p>
+                        <a href="https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp?hl=en" target="_blank" rel="noopener noreferrer" class="cta-button">Install Extension</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Erik. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+</html>
