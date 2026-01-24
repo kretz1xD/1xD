@@ -8,7 +8,7 @@
         :root {
             --bg-color: #0a0a0b;
             --card-bg: #141416;
-            --accent-color: #3b82f6; /* Blue accent */
+            --accent-color: #3b82f6; /* Blue accent matching performance aesthetic */
             --accent-glow: rgba(59, 130, 246, 0.4);
             --text-primary: #ffffff;
             --text-secondary: #a1a1aa;
@@ -136,6 +136,8 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -160,7 +162,7 @@
             color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
-            min-height: 3rem;
+            flex-grow: 1;
         }
 
         .card-features {
@@ -242,43 +244,102 @@
             <a href="#">Utilities</a>
             <a href="#">Resources</a>
         </div>
-        <a href="#" class="cta-btn">Get Started</a>
+        <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" class="cta-btn">GitHub Page</a>
     </nav>
 
     <section class="hero">
         <h1>Essential Utilities</h1>
-        <p>Powerful tools designed to optimize your system, reduce latency, and give you a competitive advantage.</p>
+        <p>Powerful tools designed to optimize your system, reduce latency, and give you a competitive advantage in Apex Legends and beyond.</p>
     </section>
 
     <main class="utilities-section">
         <div class="grid">
             <!-- Utility 1 -->
             <div class="card">
+                <span class="card-icon">🎮</span>
+                <h3>Apex Legends Tweaks</h3>
+                <p>The ultimate optimization pack for Apex Legends. Custom engine configurations and videoconfigs designed for maximum frame stability and zero input lag.</p>
+                <ul class="card-features">
+                    <li>Custom autoexec.cfg</li>
+                    <li>Advanced Videoconfig tweaks</li>
+                    <li>Visibility Enhancements</li>
+                </ul>
+                <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" class="download-btn">Download Utility</a>
+            </div>
+
+            <!-- Utility 2 -->
+            <div class="card">
                 <span class="card-icon">🚀</span>
                 <h3>System Latency Tool</h3>
-                <p>Minimize DPC latency and system interrupts with a single click. Ideal for competitive FPS players.</p>
+                <p>Minimize DPC latency and system interrupts with a single click. Ideal for competitive FPS players seeking consistent frame times.</p>
                 <ul class="card-features">
                     <li>DPC Latency Reduction</li>
                     <li>Timer Resolution Fix</li>
                     <li>Interrupt Management</li>
                 </ul>
-                <a href="#" class="download-btn">Download Utility</a>
-            </div>
-
-            <!-- Utility 2 -->
-            <div class="card">
-                <span class="card-icon">🎮</span>
-                <h3>Apex Optimizer</h3>
-                <p>Custom engine configurations and videoconfig tweaks for maximum frame stability and clarity.</p>
-                <ul class="card-features">
-                    <li>Custom autoexec.cfg</li>
-                    <li>Advanced DX11/DX12 Tweaks</li>
-                    <li>Visibility Enhancements</li>
-                </ul>
-                <a href="#" class="download-btn">Download Utility</a>
+                <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" class="download-btn">Download Utility</a>
             </div>
 
             <!-- Utility 3 -->
             <div class="card">
                 <span class="card-icon">⚡</span>
-           
+                <h3>Network Prioritizer</h3>
+                <p>Advanced registry tweaks to lower ping and eliminate packet loss during heavy gameplay sessions on EA servers.</p>
+                <ul class="card-features">
+                    <li>Nagle's Algorithm Disable</li>
+                    <li>TCP NoDelay Tweak</li>
+                    <li>DNS Optimization</li>
+                </ul>
+                <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" class="download-btn">Download Utility</a>
+            </div>
+
+            <!-- Utility 4 -->
+            <div class="card">
+                <span class="card-icon">🧹</span>
+                <h3>Service Debloater</h3>
+                <p>Removes unnecessary background telemetry and Windows services to free up CPU cycles for your game.</p>
+                <ul class="card-features">
+                    <li>Telemetry Removal</li>
+                    <li>Process Count Reduction</li>
+                    <li>Background Cleanup</li>
+                </ul>
+                <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" class="download-btn">Download Utility</a>
+            </div>
+
+            <!-- Utility 5 -->
+            <div class="card">
+                <span class="card-icon">🔋</span>
+                <h3>Power Plan Pro</h3>
+                <p>Unlock the "Ultimate Performance" hidden power scheme with custom CPU core parking settings optimized for gaming.</p>
+                <ul class="card-features">
+                    <li>Core Parking Disabled</li>
+                    <li>High Priority Clocking</li>
+                    <li>Latency-Free Switching</li>
+                </ul>
+                <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" class="download-btn">Download Utility</a>
+            </div>
+
+            <!-- Utility 6 -->
+            <div class="card">
+                <span class="card-icon">🖥️</span>
+                <h3>GPU Enhancer</h3>
+                <p>Safe NVIDIA and AMD driver optimizations to reduce input lag and improve overall frame pacing.</p>
+                <ul class="card-features">
+                    <li>NVIDIA Profile Inspector Tweak</li>
+                    <li>Low Latency Mode+</li>
+                    <li>Texture Filtering Boost</li>
+                </ul>
+                <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" class="download-btn">Download Utility</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span class="footer-logo">⚡ kretz1xD Tweaks</span>
+            <p class="copyright">© 2026 kretz1xD Tweaks. Professional PC optimization for performance-focused users.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
