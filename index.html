@@ -3,95 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erik's Tech Hub</title>
-    <!-- Stylish Inter Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>kretz1xD Tweaks | Utilities</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0b;
+            --card-bg: #141416;
+            --accent-color: #3b82f6; /* Blue accent */
+            --accent-glow: rgba(59, 130, 246, 0.4);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --border-color: #27272a;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(10, 10, 11, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .cta-btn {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 14px 0 var(--accent-glow);
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 5% 4rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.05em;
+            background: linear-gradient(to right, #fff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Utilities Grid */
+        .utilities-section {
+            padding: 2rem 5% 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            min-height: 3rem;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .card-features li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-features li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .download-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0.8rem;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .card:hover .download-btn {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-weight: 800;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Erik's Tech Hub</h1>
-            <!-- Dark/Light Mode Toggle -->
-            <label class="toggle-switch">
-                <input type="checkbox" id="mode-toggle">
-                <span class="slider round"></span>
-            </label>
+
+    <nav>
+        <div class="logo">⚡ kretz1xD <span>Tweaks</span></div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Utilities</a>
+            <a href="#">Resources</a>
         </div>
-    </header>
+        <a href="#" class="cta-btn">Get Started</a>
+    </nav>
 
-    <main class="main">
-        <section class="hero">
-            <div class="container">
-                <h2 class="hero-title">Hi, I'm Erik!</h2>
-                <p class="hero-subtitle">I got into programming and gaming when I was 12, and now I specialize in optimizing PC performance for better FPS, lower latency, and smoother gameplay.</p>
-                <p class="hero-subtitle">As an IT/Technical support expert for software-side PC tweaks, I've guided over 100,000 people with my Apex Legends optimization GitHub repo.</p>
-                <a href="https://github.com/kretz1xD/Apex-Legends-Tweaks" target="_blank" rel="noopener noreferrer" class="cta-button">Check My Apex Repo</a>
+    <section class="hero">
+        <h1>Essential Utilities</h1>
+        <p>Powerful tools designed to optimize your system, reduce latency, and give you a competitive advantage.</p>
+    </section>
+
+    <main class="utilities-section">
+        <div class="grid">
+            <!-- Utility 1 -->
+            <div class="card">
+                <span class="card-icon">🚀</span>
+                <h3>System Latency Tool</h3>
+                <p>Minimize DPC latency and system interrupts with a single click. Ideal for competitive FPS players.</p>
+                <ul class="card-features">
+                    <li>DPC Latency Reduction</li>
+                    <li>Timer Resolution Fix</li>
+                    <li>Interrupt Management</li>
+                </ul>
+                <a href="#" class="download-btn">Download Utility</a>
             </div>
-        </section>
 
-        <section class="expertise">
-            <div class="container">
-                <h3 class="section-title">My Expertise</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4 class="card-title">PC Performance Optimization</h4>
-                        <p class="card-text">Tweak software settings to boost FPS, reduce input latency, and eliminate stutters for gaming and productivity.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4 class="card-title">Apex Legends Optimization</h4>
-                        <p class="card-text">Curated repo with step-by-step guides to get the most out of your system for Apex Legends—used by 100k+ gamers.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4 class="card-title">Technical Support</h4>
-                        <p class="card-text">Help with software troubleshooting, driver updates, and system tweaks to keep your PC running at peak performance.</p>
-                    </div>
-                </div>
+            <!-- Utility 2 -->
+            <div class="card">
+                <span class="card-icon">🎮</span>
+                <h3>Apex Optimizer</h3>
+                <p>Custom engine configurations and videoconfig tweaks for maximum frame stability and clarity.</p>
+                <ul class="card-features">
+                    <li>Custom autoexec.cfg</li>
+                    <li>Advanced DX11/DX12 Tweaks</li>
+                    <li>Visibility Enhancements</li>
+                </ul>
+                <a href="#" class="download-btn">Download Utility</a>
             </div>
-        </section>
 
-        <section class="depin-projects">
-            <div class="container">
-                <h3 class="section-title">Favorite DePIN Projects (Use My Referral Links!)</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4 class="card-title">DataHive AI</h4>
-                        <p class="card-text">$3.5M Raised</p>
-                        <a href="https://datahive.ai?invite=v36etr9" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
-                    </div>
-                    <div class="feature-card">
-                        <h4 class="card-title">Browser Cash</h4>
-                        <p class="card-text">$1M Raised</p>
-                        <a href="https://app.browser.cash/install?ref=qdsuebu3" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
-                    </div>
-                    <div class="feature-card">
-                        <h4 class="card-title">Grass</h4>
-                        <p class="card-text">$14.5M Raised</p>
-                        <a href="https://app.grass.io/register?referralCode=u5khNQf2rAmFazd" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
-                    </div>
-                    <div class="feature-card">
-                        <h4 class="card-title">Nodepay</h4>
-                        <p class="card-text">$7.00M Raised</p>
-                        <a href="https://app.nodepay.ai/register?ref=jDywZjLaAi7MJhf" target="_blank" rel="noopener noreferrer" class="cta-button">Join Now</a>
-                    </div>
-                    <div class="feature-card">
-                        <h4 class="card-title">DAWN Validator</h4>
-                        <p class="card-text">$45M Raised<br>Use Code: hznvxikv</p>
-                        <a href="https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp?hl=en" target="_blank" rel="noopener noreferrer" class="cta-button">Install Extension</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Erik. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <!-- Utility 3 -->
+            <div class="card">
+                <span class="card-icon">⚡</span>
+           
